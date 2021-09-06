@@ -137,8 +137,8 @@ html,body{
 }
 
 
-.fancy-link:hover, 
-.fancy-link:focus-visible{
+.fancy-link:focus-visible,
+.fancy-link:hover{ 
     background-size: 100% 3px;
 }
 
@@ -238,10 +238,10 @@ html,body{
 .icon:hover,
 .btn:focus-visible,
 .btn:hover{
-    background-position: right center; /* change the direction of the change here */
+    background-position: right center; 
     color: #fff;
     text-decoration: none;
-}
+} 
 
 /* TITULOS */
 .section-tittle{
@@ -371,24 +371,50 @@ html,body{
     
   }
   
-  .socials-links > a{
-    font-size:1.25rem;
+  .fab{
+    
+    font-size:1.35rem;
     text-decoration:none;
+    
     color: var(--clr-main-white);
+    
     margin:0.5rem 1rem;
     text-shadow: 2px 2px 4px var(--clr-smooky-dark);
     transition: transform .3s ease-out;
   }
+
+.fab::before{
+  padding-right: 0.5rem;
+} 
+
+.fab:nth-of-type(1)::before{
+  content:'\f082';
+} 
+
+.fab:nth-of-type(2)::before{
+  content:'\f099';
+} 
+
+.fab:nth-of-type(3)::before{
+  content:'\f16d';
+} 
+
+.fab:nth-of-type(4)::before{
+  content:'\f232';
+} 
+
+.fab:nth-of-type(5)::before{
+  content:'\f392';
+} 
   
-  .socials-links > a:hover{
-    transform: translateY(-8px);
-  }
+.fab:hover{
+  transform: translateY(-8px);
+}
   
   
 /* MEDIA QUERIES */
 @media (hover: hover){
   
-
   .proyect:hover{
     background-size:100%;
   }
@@ -400,6 +426,10 @@ html,body{
   .proyect:hover span { 
     background-size:100%;
     border-left: 2px solid var(--clr-smooky-dark);
+  }
+  
+  .socials-links > a:hover{
+    transform: translateY(-8px);
   }
   
 }
