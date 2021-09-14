@@ -50,7 +50,7 @@ html,body{
     --top-spacing: 3.55rem;
 }
 
-
+/* This project was thought and developed from the methodology of "Mobile first" */
 
 /* HEADER */ 
 
@@ -60,10 +60,12 @@ html,body{
     left: 0;
     width: 100%;
     
+
     background-color: var(--clr-smooky-dark);
     border-bottom: 1px solid gray;
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     z-index:1;
     text-align:center;
     
@@ -73,13 +75,14 @@ html,body{
 
 .logo{
     cursor:default;
+    width:300px;
+    padding: 0.75rem 0;
 }
 
 .logo p{
     font-family: 'Fira Sans', sans-serif;
     color: var(--clr-main-white);
     letter-spacing: 2px;
-    padding: 0.55rem 0;
 }
 
 .logo p::after{
@@ -108,7 +111,8 @@ html,body{
 
 .navlink {
     display: inline-block;
-    margin: 0 1rem;
+    margin: 0.35rem 1rem;
+    
     color: var(--clr-main-white);
     font-weight: var(--fw-bold); 
     text-decoration:none;
@@ -148,10 +152,7 @@ html,body{
     min-height: 100vh;
     margin: 0 auto;
     padding-top: var(--top-spacing);
-    
     background: linear-gradient(180deg, var(--clr-light-blue) 0%, var(--clr-smooky-dark) 80%);
-    
-    
     display: flex;
     justify-content: space-evenly;
     flex-wrap:wrap;
@@ -169,37 +170,33 @@ html,body{
 }
 
 .meDesc{
-  padding-top:2rem;
-  height:auto;  
-  text-align: left;
-  margin-left: 1rem;
-  color:var(--clr-main-white);
+    padding-top:2rem;
+    height:auto;  
+    text-align: left;
+    margin-left: 1rem;
+    color:var(--clr-main-white);
   
 }
 
 .meDesc > h1{
     font-family: 'Fira Sans', sans-serif;
     font-weight: var(--fw-bold);
-    text-indent: -5px;
+    text-indent: -3px;
     font-size: 4rem;
     
     
 }
 
 .meDesc > span {
-    
     font-weight: var(--fw-light);
     letter-spacing: 5px;
-    
     font-size: 2rem;
 }
 
 .meDesc > span:last-of-type{
     font-weight: var(--fw-main);
     color: var(--clr-orange-detail);
-    line-height: inherit;
-   
-    
+    line-height: inherit;  
 }
 
 
@@ -266,13 +263,12 @@ html,body{
 }
   
 .grid{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      grid-gap: 3rem;
-      width: 100%;
-      max-width: 1280px;
-      margin: 0 auto;
-      
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 2rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;   
 }
   
 .proyect{
@@ -294,8 +290,7 @@ html,body{
     display:block;
     height: calc(100% - 3rem);
     width: 100%;
-    
-  
+
     object-fit: cover;
     border-top-left-radius:8px;
     border-top-right-radius:8px;
@@ -306,26 +301,37 @@ html,body{
 
   
 .project-tile{
-    min-height: 3rem;
+    
     display:flex;
     justify-content: space-between;
     align-items:center;
+
     color:var(--clr-main-white);
     font-size:1rem;
     padding-left: 10%;
+
+    
     border-radius: 8px;
-     
 }
   
 .project-tile > span{
+    /* Due to the border-left acting as a "buton display", 2 things appeared on the way 
+    1) I setted up the height to match the as my grid's height'img { calc(100% image space - space for tile) } = border-left ready.
+    2) The second problem was due to my the character '>' isn't so big as my paragraph amd align-items seem right but i had to manually set things up for the sweet spot :
+            - font-size +20% size to appear same size
+            - padding-bottom: 0.265rem + align center
     
-    border-bottom-right-radius: 8px;
+    */
     height: 3rem;
-    padding: 0 0.685rem;
+    border-left: 2px solid var(--clr-main-white);
+    
     display:flex;
     align-items:center;
-    font-size: inherit;
-    border-left: 2px solid var(--clr-main-white);
+    padding: 0 0.685rem 0.265rem;
+    
+    font-size: 120%;
+
+    border-bottom-right-radius: 8px;
     
     background-color: var(--clr-smooky-dark);
     background-image: linear-gradient(270deg, var(--clr-red-ascent) 0%, var(--clr-orange-detail) 75%);
@@ -371,101 +377,78 @@ html,body{
     
   }
   
-  .fab{
-    
+  .media-link{
     font-size:1.35rem;
     text-decoration:none;
-    
     color: var(--clr-main-white);
-    
+    padding: 0.5rem 0.3rem;
     margin:0.5rem 1rem;
     text-shadow: 2px 2px 4px var(--clr-smooky-dark);
     transition: transform .3s ease-out;
   }
 
-.fab::before{
-  padding-right: 0.5rem;
+.fas,.fab{
+  padding-right: 0.4rem;
 } 
-
-.fab:nth-of-type(1)::before{
-  content:'\f082';
-} 
-
-.fab:nth-of-type(2)::before{
-  content:'\f099';
-} 
-
-.fab:nth-of-type(3)::before{
-  content:'\f16d';
-} 
-
-.fab:nth-of-type(4)::before{
-  content:'\f232';
-} 
-
-.fab:nth-of-type(5)::before{
-  content:'\f392';
-} 
-  
-.fab:hover{
-  transform: translateY(-8px);
-}
   
   
 /* MEDIA QUERIES */
+
+/* MY HOVERS + FOCUS ORGANIZED (NOT ALL CAN I INCLUDE HERE, some stop responding in smartdevices and touchscreens)*/
 @media (hover: hover){
-  
+  .proyect:focus,
   .proyect:hover{
     background-size:100%;
   }
-  
+  .proyect:focus img,
   .proyect:hover img { 
      filter: none;
   }
-  
+  .proyect:focus span,
   .proyect:hover span { 
     background-size:100%;
     border-left: 2px solid var(--clr-smooky-dark);
   }
-  
-  .socials-links > a:hover{
+  .media-link:focus,
+  .media-link:hover{
     transform: translateY(-8px);
   }
   
 }
-
+/* SMARTDEVICES, TOUCHSCREENS = DISABLE HOVER ANIMATIONS*/
 @media (hover: none) and (pointer: coarse){
+     
   
-  
-  .proyect {
+    .proyect {
     background-size:100%;
-  }
-  .project-tile > span{
+    }
+    .project-tile > span{
     background-size:100%;
-    
-  }
-  
-  .proyectImg { 
-     filter: none;
-  }
+
+    }
+
+    .proyectImg { 
+        filter: none;
+    }
   
   
 }
 
 @media(min-width: 500px){
     :root{
-        --top-spacing:2.25rem;
+        --top-spacing:2.50rem;
     }
     
-    /* NAVBAR*/
-    #navbar {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-    }
 
     .navlink{
         font-size: 80%;
+        margin: 0.75rem 1rem;
+        
+    }
+
+    .logo{
+        padding: 0.75rem 0;
+
     }
     /* WELCOME SECTION */ 
     #welcome-section{
@@ -482,7 +465,17 @@ html,body{
     .meDesc{
         order: -1;
     }
+
+    #navbar {
+        justify-content: space-around;
+    }
 }
 
+@media(min-width:1300px){
+    .navlink{
+        margin: 0.75rem 1.75rem;
+    }
+
+}
 
 
