@@ -167,7 +167,7 @@ html,body{
 }
 
 .welcome-container{
-    min-height: 120vh;
+    min-height: 100vh;
     padding: 0 4.75rem 0 6rem;
     margin: 0 auto;
     max-width: 1300px;
@@ -216,7 +216,7 @@ html,body{
     line-height: inherit;  
 }
 
-@media screen and (max-width:933px){
+@media (max-width:933px){
     .navbar__container{
         display: flex;
         justify-content: space-between;
@@ -279,7 +279,7 @@ html,body{
     #mobile-menu{
         position: absolute;
         top: 20%;
-        right: 10%;
+        right: 7%;
         transform: translate(5%,20%);
         cursor: pointer;
     }
@@ -470,7 +470,7 @@ html,body{
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    height:120vh;
+    height:100vh;
     color:var(--clr-main-white);
   }
   .socials-header{
@@ -554,7 +554,12 @@ html,body{
 
 @media screen and (max-width:435px){
     
-    
+    #welcome-section,
+    #proyects,
+    .socials-section{
+        min-height: 120vh;
+    }
+
     .welcome-container{
         padding: 0;
     }
