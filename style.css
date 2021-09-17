@@ -171,6 +171,7 @@ html,body{
     padding: 0 4.75rem 0 6rem;
     margin: 0 auto;
     max-width: 1300px;
+    
     display: flex;
     justify-content: space-between;
     flex-wrap:wrap;
@@ -278,7 +279,7 @@ html,body{
     #mobile-menu{
         position: absolute;
         top: 20%;
-        right: 5%;
+        right: 10%;
         transform: translate(5%,20%);
         cursor: pointer;
     }
