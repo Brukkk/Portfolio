@@ -167,7 +167,7 @@ html,body{
 }
 
 .welcome-container{
-    min-height: 100vh;
+    min-height: 120vh;
     padding: 0 4.75rem 0 6rem;
     margin: 0 auto;
     max-width: 1300px;
@@ -470,7 +470,7 @@ html,body{
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    height:100vh;
+    height:120vh;
     color:var(--clr-main-white);
   }
   .socials-header{
