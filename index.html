@@ -1,4 +1,6 @@
 
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,30 +14,47 @@
     <title>Personal Portfolio</title>
 </head>
 <body>
-    <nav id="navbar">
-        <div class="logo">
-            <p>dev-bruk</p>
+    <nav class="navbar">
+        <div class="navbar__container">
+            
+            <a class="logo" href="#welcome-section"><p >dev-bruk</p></a>
+            
+            <div class="navbar__toogle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="#welcome-section" class="navbar__links  fancy-link" tabindex="0">About me</a></li>
+                <li class="navbar__item"><a href="#projects" class="navbar__links  fancy-link" tabindex="0">Projects</a></li>
+                <li class="navbar__item"><a href="#socials" class="navbar__links  fancy-link" tabindex="0">Socials</a></li>
+            </ul>    
         </div>
-        <ul>
-            <li><a href="#welcome-section" class="navlink fancy-link" tabindex="0">About me</a></li>
-            <li><a href="#projects" class="navlink fancy-link" tabindex="0">Projects</a></li>
-            <li><a href="#socials" class="navlink fancy-link" tabindex="0">Socials</a></li>
-        </ul>    
     </nav>
+    <script src="app.js"></script>
     <!-- START OF WELCOME SECTION-->
     <section id="welcome-section">
-        <div>
-            <img class="meFoto" src="https://i.ibb.co/VYyC7Zz/BRUK4.png" alt="me" >
-        </div>
-        <div class="meDesc">
-            <span>hello!</span>
-            <h1>I'm Bruk</h1>
-            <span>frontend developer</span>
-            <div class="buttons">
-                <button class="btn">Download CV</button>
-                <a id="profile-link" href="https://github.com/Brukkk" target="_blank"><img class="icon" src="https://icongr.am/entypo/github.svg?size=50&color=ffffff" tabindex="0" alt="github"></a>
-                <a href="https://www.linkedin.com/in/bruno-torrabadella-36a679119/" target="_blank"><img class="icon" src="https://icongr.am/entypo/linkedin.svg?size=20&color=ffffff" tabindex="0" alt="github"></a>
+        <div class="welcome-container">
+            
+            
+            <div class="meDesc">
+                <span>hello!</span>
+                <h1>I'm Bruk</h1>
+                <span>frontend developer</span>
+                <div class="buttons">
+                    <button class="btn">Download CV</button>
+                    
+                    <a id="profile-link" href="https://github.com/Brukkk" target="_blank">
+                        <img class="icon" src="https://icongr.am/entypo/github.svg?size=50&color=ffffff" tabindex="0" alt="github">
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/bruno-torrabadella-36a679119/" target="_blank">
+                        <img class="icon" src="https://icongr.am/entypo/linkedin.svg?size=20&color=ffffff" tabindex="0" alt="github">
+                    </a>
+                </div>
             </div>
+            
+            <img class="meFoto" src="https://i.ibb.co/VYyC7Zz/BRUK4.png" alt="me" >
         </div>
         
         
@@ -46,49 +65,40 @@
     <section id="projects">
         <h2 class="section-tittle">Some of my projects</h2>
         <div class="grid">
+
+            <a class="proyect" href="https://codepen.io/brukst/full/QWpBpJm" target="_blank" tabindex="0">
+                <img class ="proyectImg" src="https://i.ibb.co/J5jcwGs/landingpage.png" alt="landingpage"  border="0">
+                <div class="project-tile">
+                    <p>Landing Page</p>
+                    <span>></span>
+
+                </div>
+            </a>
           
-          
-            <a class="proyect" href="https://codepen.io/brukst/full/QWpBpJm" target="_blank"><img class ="proyectImg" src="https://i.ibb.co/J5jcwGs/landingpage.png" alt="landingpage"  border="0">
-            
-              <div class="project-tile">
-              <p>Landing Page</p>
-              <span>></span>
-                
-              </div>
-              
-              </a>
-          
-          
-          
-            <a class="proyect" href="https://codepen.io/brukst/full/ZEKqYNz" target="_blank"><img class ="proyectImg" src="https://i.ibb.co/bPXdgX5/technicalpage.png" alt="landingpage" border="0">
-            
-            
-              <p class="project-tile">Technical Page
-              <span>></span>
-              </p>
-              </a>
-          
-          
-          
-            <a class="proyect" href="https://codepen.io/brukst/full/vYxEBrQ" target="_blank"><img class ="proyectImg" src="https://i.ibb.co/LN6BZXd/surveypage.png" alt="Survey Form" border="0">
-            
-            
-              <p class="project-tile">Survey Form
-              <span>></span>
-              </p>
-              </a>
-          
-          
-          
-            <a class="proyect" href="https://codepen.io/brukst/full/LYxoGgq" target="_blank"><img class ="proyectImg" src="https://i.ibb.co/4gb0kC7/tributepage.png" alt="Tribute Page" border="0">
-            
-            
-              <p class="project-tile">Tribute Page
-              <span>></span>
-              </p>
-              </a>
-          
-          
+            <a class="proyect" href="https://codepen.io/brukst/full/ZEKqYNz" target="_blank" tabindex="0">
+                <img class ="proyectImg" src="https://i.ibb.co/bPXdgX5/technicalpage.png" alt="landingpage" border="0">
+                <div class="project-tile">
+                    <p>Technical Page</p>
+                    <span>></span>
+                </div>
+            </a>
+
+            <a class="proyect" href="https://codepen.io/brukst/full/vYxEBrQ" target="_blank" tabindex="0">
+                <img class ="proyectImg" src="https://i.ibb.co/LN6BZXd/surveypage.png" alt="Survey Form" border="0">
+                <div class="project-tile">
+                    <p>Survey Form</p>
+                    <span>></span>
+                </div>
+            </a>
+
+            <a class="proyect" href="https://codepen.io/brukst/full/LYxoGgq" target="_blank" tabindex="0">
+                <img class ="proyectImg" src="https://i.ibb.co/4gb0kC7/tributepage.png" alt="Tribute Page" border="0">
+                <div class="project-tile">
+                    <p>Tribute Page</p>
+                    <span>></span>
+                </div>
+            </a>
+
         </div>
     </section>
       <!-- END OF PROJECTS SECTION-->
@@ -99,11 +109,11 @@
             <span><i>Maybe coffee and chat?</i></span>
         </div>
         <div class="socials-links">
-            <a href="https://www.facebook.com/BruK.BT1" class="fab" target="_blank">Facebook</a>
-            <a href="https://twitter.com/BruksT" class="fab" target="_blank">Twitter</a>
-            <a href="https://www.instagram.com/brukkk/" class="fab" target="_blank">Instagram</a>
-            <a href="https://api.whatsapp.com/send?phone=5491131189779" class="fab" target="_blank">WhatsApp</a>
-            <a href="https://discord.gg/z75Mh2j8HG" class="fab" target="_blank">Discord</a>
+            <a href="https://www.facebook.com/BruK.BT1" class="media-link" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+            <a href="https://twitter.com/BruksT" class="media-link" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+            <a href="https://www.instagram.com/brukkk/" class="media-link" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+            <a href="https://api.whatsapp.com/send?phone=5491131189779" class="media-link" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+            <a href="mailto:bruktorra@gmail.com" class="media-link" target="_blank"><i class="fas fa-envelope"></i>E-mail</a>
         </div>
     </section>  
       <!-- END OF PROJECTS SECTION-->
