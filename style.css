@@ -311,15 +311,7 @@ html,body{
 
 }
 
-@media screen and (max-width:435px){
-    .welcome-container{
-        padding: 0;
-    }
-    
-    .meDesc{
-        padding: 0.45rem 2rem;
-    }
-}
+
 
 
 
@@ -558,4 +550,39 @@ html,body{
     }
   
   
+}
+
+@media screen and (max-width:435px){
+    
+    
+    .welcome-container{
+        padding: 0;
+    }
+    
+    .meDesc{
+        
+        padding: 0.45rem 0rem;
+        padding-left: 1rem;
+    }
+
+    .meDesc > span{
+        font-size: 1.5rem;
+    }
+    .meDesc > h1{
+        font-size: 3rem;
+
+    }
+
+    .icon,
+    .btn{
+        margin-right: 15px;
+        height: 50px;
+
+    }
+
+    .buttons > a:last-child > .icon{
+        margin-right: 0;
+    }
+
+    
 }
