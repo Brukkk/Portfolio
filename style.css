@@ -21,7 +21,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 html,body{
 	scroll-behavior: smooth;
-	scroll-padding-top: 2rem; /* replace adding positive padding and negative margin */
+	scroll-padding-top: 80px; /* replace adding positive padding and negative margin */
     
 }
 
@@ -47,133 +47,148 @@ html,body{
 	--clr-smooky-dark: #0a0401;
 	--clr-light-blue: #0F4C5C;
     --clr-orange-detail: #E56C10;
-    --top-spacing: 3.55rem;
+    --top-spacing: 80px;
 }
 
 /* This project was thought and developed from the methodology of "Mobile first" */
 
-/* HEADER */ 
 
-#navbar{
+
+/* NAVBAR AND CONTAINER */ 
+
+.navbar{
+    background-color: var(--clr-smooky-dark);
+    height: var(--top-spacing);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    
+    right: 0;
+    z-index:999;
 
-    background-color: var(--clr-smooky-dark);
     border-bottom: 1px solid gray;
+}
+
+.navbar__container{
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    z-index:1;
-    text-align:center;
-    
+    justify-content: space-between;
+    height: var(--top-spacing);
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 4.75rem 0 6rem;
 }
 
 /* """" LOGO""" */
 
 .logo{
-    cursor:default;
-    width:300px;
-    padding: 0.75rem 0;
-}
-
-.logo p{
-    font-family: 'Fira Sans', sans-serif;
     color: var(--clr-main-white);
-    letter-spacing: 2px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: var(--fw-main);
+    display: flex;
+    align-items: center;
+    height: var(--top-spacing);
+    letter-spacing: 8px;
+    cursor:pointer;
+    text-decoration: none;
+    font-size: 1.5rem;
 }
 
-.logo p::after{
+.logo::after{
     content: '}';
     color: var(--clr-orange-detail);
 
 }
 
-.logo p::before{
+.logo::before{
     content:'{';
     color: var(--clr-orange-detail);
 }
 
+/* NAVBAR MENU*/
 
-/* NAVEGADORES */ 
-
-#navbar ul{
+.navbar__menu {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     list-style: none;
-    cursor: pointer;
-    
-    
 }
 
-.navlink {
-    display: inline-block;
-    margin: 0.35rem 1rem;
-    
+.navbar__item{
+    height: var(--top-spacing);
+}
+
+.navbar__links{
     color: var(--clr-main-white);
     font-weight: var(--fw-bold); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration:none;
+    height: 100%;
+    width: 125px;
+    padding: 0 1rem;
     text-transform: uppercase;
-    padding-bottom: 3px;
-    font-size: 72%;
+    font-size: 0.85rem;
 
-    
-    transition: all 0.3s ease 0s;
-       
+
 }
 
-.navlink:focus-visible,
-.navlink:hover{
-    color: var(--clr-red-ascent);
-    
-}
-
-/* LINE EFFECT */
+/* LINE EFFECT + COLOR EFFECT */
 .fancy-link{
     background-image: linear-gradient(90deg,var(--clr-orange-detail),var(--clr-red-ascent));
-    background-size: 0% 3px;
+    background-size: 0% 2px;
     background-repeat: no-repeat;
     background-position: left bottom;
-    transition: background-size 300ms ease;
+    transition: all 300ms ease;
 }
 
 
 .fancy-link:focus-visible,
 .fancy-link:hover{ 
-    background-size: 100% 3px;
+    background-size: 100% 2px;
+    color: var(--clr-red-ascent);
 }
+
+
 
 /* WELCOME SECTION*/
 
-#welcome-section{
-    min-height: 100vh;
-    margin: 0 auto;
+#welcome-section {
+
     padding-top: var(--top-spacing);
     background: linear-gradient(180deg, var(--clr-light-blue) 0%, var(--clr-smooky-dark) 80%);
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap:wrap;
-    align-content: center;
+    
 }
 
+.welcome-container{
+    min-height: 100vh;
+    padding: 0 4.75rem 0 6rem;
+    margin: 0 auto;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    align-content: center;
 
-
+}
 
 /* PROFILE PIC */
 .meFoto{
-    width: 250px;
+    max-width: 300px;
     height: auto;
-    padding-top: 2rem;
+    
 }
 
 .meDesc{
-    padding-top:2rem;
+    
     height:auto;  
     text-align: left;
-    margin-left: 1rem;
     color:var(--clr-main-white);
   
 }
@@ -188,6 +203,7 @@ html,body{
 }
 
 .meDesc > span {
+    
     font-weight: var(--fw-light);
     letter-spacing: 5px;
     font-size: 2rem;
@@ -198,6 +214,113 @@ html,body{
     color: var(--clr-orange-detail);
     line-height: inherit;  
 }
+
+@media screen and (max-width:933px){
+    .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height: var(--top-spacing);
+        z-index: 1;
+        width: 100%;
+        max-width: 1300%;
+        padding: 0;
+    }
+
+    .navbar__menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px; 
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: -1;
+
+    }
+
+    .navbar__menu.active{
+        background: var(--clr-smooky-dark);
+        top: 100%;
+        opacity: 1;
+        transition: all ease 0.5s ease;
+        z-index: 99;
+        
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        padding-left: 1.5rem;
+    }
+    /* Menu icon = hamburger (number of child 1) */ 
+    .navbar__toogle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: var(--clr-main-white);
+        /* We can see it now */
+        display: block;
+        
+    }
+
+    .navbar__item{
+        width: 100% ;
+    }
+
+    .navbar__links{
+        text-align: center;
+        padding: 1.5rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%,20%);
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+
+    /* WELCOME SECTION */
+    
+    .welcome-container{
+        justify-content: center;
+        
+    }
+
+    .meFoto{
+        order: -1;
+    }
+
+}
+
+@media screen and (max-width:435px){
+    .welcome-container{
+        padding: 0;
+    }
+    
+    .meDesc{
+        padding: 0.45rem 2rem;
+    }
+}
+
+
 
 
 /* BUTTONS */
@@ -257,8 +380,10 @@ html,body{
 #projects{
     text-align: center;
     background: linear-gradient(0deg, rgba(15,76,92,1) 0%, rgba(10,4,1,1) 100%);
-    padding: 0 1.865rem;
+    padding: 0 1rem;
+    margin: 0 auto;
     padding-bottom: 4rem;
+    min-width: 320px;
   
 }
   
@@ -417,13 +542,13 @@ html,body{
 }
 /* SMARTDEVICES, TOUCHSCREENS = DISABLE HOVER ANIMATIONS*/
 @media (hover: none) and (pointer: coarse){
-     
-  
+    
     .proyect {
-    background-size:100%;
+        background-size:100%;
     }
+
     .project-tile > span{
-    background-size:100%;
+        background-size:100%;
 
     }
 
@@ -433,49 +558,3 @@ html,body{
   
   
 }
-
-@media(min-width: 500px){
-    :root{
-        --top-spacing:2.50rem;
-    }
-    
-
-    .navlink{
-        font-size: 80%;
-        margin: 0.75rem 1rem;
-        
-    }
-
-    .logo{
-        padding: 0.75rem 0;
-
-    }
-    /* WELCOME SECTION */ 
-    #welcome-section{
-        padding-top: var(--top-spacing);
-    }
-
-    /* PROJECT */
-    .project-tile{
-        font-size:1.35rem;
-    }
-}
-
-@media(min-width:717px){
-    .meDesc{
-        order: -1;
-    }
-
-    #navbar {
-        justify-content: space-around;
-    }
-}
-
-@media(min-width:1300px){
-    .navlink{
-        margin: 0.75rem 1.75rem;
-    }
-
-}
-
-
