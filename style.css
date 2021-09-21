@@ -330,17 +330,24 @@ html,body{
     padding: 5px 10px;
     height: 60px;
     text-align: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    font-weight: var(--fw-bold);
+    
+    
     transition: 0.5s;
     background-size: 200% auto;
-    color: var(--clr-main-white);            
+              
     box-shadow: 0 0 10px var(--clr-main-white);
     border-radius: 16px;
     border-style: none;
     cursor: pointer;
     
+}
+
+.btn > a{
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-main-white);  
 }
 
 .icon {
