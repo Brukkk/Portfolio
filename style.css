@@ -414,7 +414,7 @@ html,body{
   
 .proyectImg{
     display:block;
-    min-height: 250px;
+    min-height: 300px;
     height: calc(100% - 3rem);
     max-height: 340px;
     width: 100%;
