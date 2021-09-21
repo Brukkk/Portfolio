@@ -390,6 +390,7 @@ html,body{
 .grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    
     grid-gap: 2rem;
     width: 100%;
     max-width: 1280px;
@@ -413,9 +414,10 @@ html,body{
   
 .proyectImg{
     display:block;
+    min-height: 250px;
     height: calc(100% - 3rem);
+    max-height: 340px;
     width: 100%;
-
     object-fit: cover;
     border-top-left-radius:8px;
     border-top-right-radius:8px;
@@ -538,6 +540,14 @@ html,body{
   .media-link:hover{
     transform: translateY(-8px);
   }
+  .proyect:hover .project-tile p{
+      display: none;
+      
+  }
+
+  .proyect:hover .project-tile::before{
+    content: 'Check it out';
+}
   
 }
 /* SMARTDEVICES, TOUCHSCREENS = DISABLE HOVER ANIMATIONS*/
