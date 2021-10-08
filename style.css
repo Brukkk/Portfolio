@@ -118,12 +118,12 @@ html,body{
     display: flex;
     align-items: center;
     list-style: none;
-    width: 500px;
+    
 }
 
 .navbar__item{
     height: var(--top-spacing);
-    margin-left: 20px;
+    margin-left: 0 10px;
 }
 
 .navbar__links{
@@ -220,14 +220,14 @@ html,body{
     line-height: inherit;  
 }
 
-@media (max-width:933px){
+@media (max-width:930px){
     .navbar__container{
         display: flex;
         justify-content: space-between;
         height: var(--top-spacing);
         z-index: 1;
         width: 100%;
-        max-width: 1300%;
+        max-width: 1300px;
         padding: 0;
     }
 
@@ -572,7 +572,7 @@ html,body{
   
 }
 
-@media screen and (max-width:435px){
+@media screen and (max-width:500px){
     
     #welcome-section,
     #proyects,
@@ -607,6 +607,10 @@ html,body{
 
     .buttons > a:last-child > .icon{
         margin-right: 0;
+    }
+
+    .meFoto{
+        width: 300px;
     }
 
     
