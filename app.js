@@ -23,8 +23,10 @@
       // Remove menu mobile
       const navMenu = document.querySelector('.navbar__menu');
       const nav = document.getElementById("mobile-menu");
+      if (nav.classList.contains("is-active")){
+        nav.classList.toggle("is-active");
+      }
       navMenu.classList.remove('active');
-      nav.classList.toggle("is-active");
       
   }
   navLink.forEach(n => n.addEventListener('click', linkAction))
