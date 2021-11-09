@@ -191,7 +191,7 @@ html,body{
 .meFoto{
     max-width: 500px;
     height: auto;
-    
+    border-radius: 50%;
 }
 
 .meDesc{
