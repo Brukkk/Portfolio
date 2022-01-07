@@ -50,7 +50,7 @@ html,body{
     --top-spacing: 80px;
 }
 
-/* This project was thought and developed from the methodology of "Mobile first" */
+/* This proyect was thought and developed from the methodology of "Mobile first" */
 
 
 
@@ -382,10 +382,10 @@ html,body{
 }
   
   
-/* PROJECTS */
+/* proyectS */
   
   
-#projects{
+#proyects{
     text-align: center;
     background: linear-gradient(0deg, rgba(15,76,92,1) 0%, rgba(10,4,1,1) 100%);
     padding: 0 0.5rem;
@@ -434,7 +434,7 @@ html,body{
   
 
   
-.project-tile{
+.proyect-tile{
     
     display:flex;
     justify-content: space-between;
@@ -448,7 +448,7 @@ html,body{
     border-radius: 8px;
 }
   
-.project-tile > span{
+.proyect-tile > span{
     /* Due to the border-left acting as a "buton display", 2 things appeared on the way 
     1) I setted up the height to match the as my grid's height'img { calc(100% image space - space for tile) } = border-left ready.
     2) The second problem was due to my the character '>' isn't so big as my paragraph amd align-items seem right but i had to manually set things up for the sweet spot :
@@ -546,12 +546,12 @@ html,body{
   .media-link:hover{
     transform: translateY(-8px);
   }
-  .proyect:hover .project-tile p{
+  .proyect:hover .proyect-tile p{
       display: none;
       
   }
 
-  .proyect:hover .project-tile::before{
+  .proyect:hover .proyect-tile::before{
     content: 'Check it out';
 }
   
@@ -563,7 +563,7 @@ html,body{
         background-size:100%;
     }
 
-    .project-tile > span{
+    .proyect-tile > span{
         background-size:100%;
 
     }
